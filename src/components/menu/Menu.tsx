@@ -1,27 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-export const Menu = () => {
+interface menuItemPropsType {
+  name: string;
+  link: string;
+  id: any;
+}
+
+interface menuItemsPropsType {
+  items: menuItemPropsType[];
+}
+
+export const Menu: React.FC<menuItemsPropsType> = (props) => {
   return (
-    <StyledMenu >
-        <ul>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">About me</a>
-          </li>
-          <li>
-            <a href="">My skills</a>
-          </li>
-          <li>
-            <a href="">Projects</a>
-          </li>
-          <li>
-            <a href="">Contacts</a>
-          </li>
-        </ul>
-      </StyledMenu>
+    <StyledMenu>
+      <ul>
+        {props.items.map((item) => {
+          return (
+            <li key={item.id}>
+              <a href={item.link}>{item.name}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </StyledMenu>
   );
 };
 
@@ -30,4 +32,4 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 52px;
   }
-`
+`;

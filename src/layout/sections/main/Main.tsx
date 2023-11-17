@@ -1,8 +1,9 @@
 import React from "react";
-import { Icon } from "../../../components/icon/Icon";
 import styled from "styled-components";
 import photoMain from "../../../assets/images/photos/For-main.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { SocialIcons } from "../../../components/socialIcons/SocialIcons";
+import { Button } from "../../../components/Button";
 
 export const Main = () => {
   return (
@@ -12,34 +13,8 @@ export const Main = () => {
           <span>Hello! I’m</span>
           <span>Khatanzeyskaya Lyudmila</span>
           <MainTitle>Frontend Developer</MainTitle>
-          <ul>
-            <li>
-              <a href="#">
-                <Icon iconId="gitHub" />
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#">
-                <Icon iconId="linkedin" />
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#">
-                <Icon iconId="telegram" />
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#">
-                <Icon iconId="instagram" />
-              </a>
-            </li>
-          </ul>
+          <SocialIcons />
+          <Button>HIRE ME</Button>
         </div>
         <Photo src={photoMain} alt="lyudmila" />
       </FlexWrapper>
@@ -47,7 +22,7 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.main`
+const StyledMain = styled.section`
   background-color: #ffbcbc
 `
 

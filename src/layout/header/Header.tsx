@@ -18,8 +18,8 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
-        <Menu items={menuItems} />
-        <Button>Projects Here</Button>
+          <Button>Projects Here</Button>
+          <Menu items={menuItems} />
         </FlexWrapper>
       </Container>
     </StyledHeader>

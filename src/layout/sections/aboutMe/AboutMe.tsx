@@ -37,6 +37,7 @@ export const AboutMe = () => {
 const ImageWrapper = styled.div`
   max-width: 1700px;
   margin-top: -150px;
+  max-height: 840px;
 `;
 
 const Image = styled.img`
@@ -45,11 +46,9 @@ const Image = styled.img`
 `;
 
 const StyledAboutMe = styled.section`
-  padding-top: 93px;
 `;
 
 const Column = styled.p`
   font-size: 18px;
   font-weight: 400;
-  margin-top: 73px;
 `;

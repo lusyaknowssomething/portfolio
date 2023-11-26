@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Button } from "../../../components/Button";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import imageForContact from "../../../assets/images/photos/For-footer.png";
+import { Dot } from "../../../components/Dot";
 
 export const Contacts = () => {
   return (
@@ -11,7 +12,7 @@ export const Contacts = () => {
       <FlexWrapper align="center" justify="space-between">
         <Image src={imageForContact} />
         <FlexWrapper direction="column">
-        <SectionTitle>Contacts</SectionTitle>
+        <SectionTitle>Contacts<Dot>.</Dot></SectionTitle>
         <Text>Please fill out the form on this section to contact with me or send me an email. I will answer you as soon as I receive your message.</Text>
         <StyledForm>
           <Field placeholder={"name"} />

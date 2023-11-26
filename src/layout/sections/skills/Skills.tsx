@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Skill } from './skill/Skill';
+import { Dot } from '../../../components/Dot';
 
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>My Skills</SectionTitle>
+      <SectionTitle>My Skills<Dot>.</Dot></SectionTitle>
       <FlexWrapper wrap={'wrap'} justify='space-between'>
         <Skill iconId={'html'} title={'HTML5'} />
         <Skill iconId={'css'} title={'CSS3'} />

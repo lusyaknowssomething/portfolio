@@ -7,12 +7,13 @@ import movieExplorer from '../../../assets/images/projects/movie_explorer.jpg'
 import socialNetwork from '../../../assets/images/projects/social-network.jpg'
 import todo from '../../../assets/images/projects/todo.jpg'
 import travel from '../../../assets/images/projects/travel.jpg'
+import { Dot } from '../../../components/Dot';
 
 
 export const Projects = () => {
   return (
     <StyledProjects>
-      <SectionTitle>My Projects </SectionTitle>
+      <SectionTitle>My Projects<Dot>.</Dot></SectionTitle>
       <Project 
         title='ToDo List' 
         text='Social Network is an online platform that allows people to create an account and interact with other people on the website. Users can build there virtual world on the site, make friends and share their thoughts and ideas by writing a post.'

@@ -1,48 +1,88 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SectionTitle } from '../../../components/SectionTitle';
-import { Project } from '../../../assets/images/projects/project/Project';
-import mesto from '../../../assets/images/projects/mesto.jpg'
-import movieExplorer from '../../../assets/images/projects/movie_explorer.jpg'
-import socialNetwork from '../../../assets/images/projects/social-network.jpg'
-import todo from '../../../assets/images/projects/todo.jpg'
-import travel from '../../../assets/images/projects/travel.jpg'
-import { Dot } from '../../../components/Dot';
+import React from "react";
+import styled from "styled-components";
+import { SectionTitle } from "../../../components/SectionTitle";
+import { Project } from "./project/Project";
+import mesto from "../../../assets/images/projects/mesto.jpg";
+import movieExplorer from "../../../assets/images/projects/movie_explorer.jpg";
+import socialNetwork from "../../../assets/images/projects/social-network.jpg";
+import todo from "../../../assets/images/projects/todo.jpg";
+import travel from "../../../assets/images/projects/travel.jpg";
+import { Dot } from "../../../components/Dot";
 
+const projectItems = [
+  {
+    title: "ToDo List",
+    text: "ToDo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management.",
+    src: todo,
+    link: "",
+    gridArea: "todo",
+    id: 1,
+  },
+  {
+    title: "Social Network",
+    text: "Social Network is an online platform that allows people to create an account and interact with other people on the website. Users can build there virtual world on the site, make friends and share their thoughts and ideas by writing a post.",
+    src: socialNetwork ,
+    link: "",
+    gridArea: "SN",
+    id: 2,
+  },
+  {
+    title: "Movie Explorer",
+    text: "An interactive service where you can find films on demand and save them in your personal account. Movies Explorer is a portfolio thesis project written in React.js using Single Page Application principles.",
+    src: movieExplorer,
+    link: "https://github.com/lusyaknowssomething/movies-explorer-frontend",
+    gridArea: "ME",
+    id: 3,
+  },
+  {
+    title: "Mesto",
+    text: "Mesto is a one-page site with the ability to register and log in, add and delete cards with a photo and name, like and unlike, and edit your profile. Analogous to a simple social network.",
+    src: mesto,
+    link: "https://github.com/lusyaknowssomething/react-mesto-api-full",
+    gridArea: "mesto",
+    id: 4,
+  },
+  {
+    title: "Russian Travel",
+    text: "Traveling around Russia is the educational project in the web development course from Yandex.Practicum. The project contains interesting places to travel around Russia.",
+    src: travel,
+    link: "https://github.com/lusyaknowssomething/russian-travel",
+    gridArea: "travel",
+    id: 5,
+  },
+];
 
 export const Projects = () => {
   return (
     <StyledProjects>
-      <SectionTitle>My Projects<Dot>.</Dot></SectionTitle>
-      <Project 
-        title='ToDo List' 
-        text='Social Network is an online platform that allows people to create an account and interact with other people on the website. Users can build there virtual world on the site, make friends and share their thoughts and ideas by writing a post.'
-        src={todo}
-      />
-      <Project 
-        title='Social Network' 
-        text='ToDo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management.'
-        src={socialNetwork}
-      />
-      <Project 
-        title='Movie Explorer' 
-        text='ToDo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management.'
-        src={movieExplorer}
-      />
-      <Project 
-        title='Mesto' 
-        text='ToDo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management.'
-        src={mesto}
-      />
-      <Project 
-        title='Russian Travel' 
-        text='ToDo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management.'
-        src={travel}
-      />
+      <SectionTitle>
+        My Projects<Dot>.</Dot>
+      </SectionTitle>
+      <ProjectsWrapper>
+      {projectItems.map((item) => {
+          return (
+            <Project
+          title={item.title}
+          text={item.text}
+          src={item.src}
+          link={item.link}
+          gridArea={item.gridArea}
+          id={item.id}
+        />
+          );
+        })}
+      </ProjectsWrapper>
     </StyledProjects>
   );
 };
 
-const StyledProjects = styled.section`
+const StyledProjects = styled.section``;
+
+const ProjectsWrapper = styled.section`
   display: grid;
-`
+  grid-template-areas:
+    "todo SN ME"
+    "todo mesto travel";
+  gap: 25px;
+  grid-template-columns: 45.15% 1fr 1fr;
+`;

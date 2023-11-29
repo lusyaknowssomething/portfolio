@@ -6,11 +6,11 @@ import { Button } from "../../components/Button";
 import { FlexWrapper } from "../../components/FlexWrapper";
 
 const menuItems = [
-  {name: 'Home', link: '', id: '1'}, 
-  {name: 'About me', link: '', id: '2'}, 
-  {name: 'My skills', link: '', id: '3'}, 
-  {name: 'Projects', link: '', id: '4'}, 
-  {name: 'Contacts', link: '', id: '5'},
+  {name: 'Home', link: '', id: 1}, 
+  {name: 'About me', link: '', id: 2}, 
+  {name: 'My skills', link: '', id: 3}, 
+  {name: 'Projects', link: '', id: 4}, 
+  {name: 'Contacts', link: '', id: 5},
 ]
 
 export const Header = () => {

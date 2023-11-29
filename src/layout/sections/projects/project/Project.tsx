@@ -9,7 +9,6 @@ type ProjectPropsType = {
   src: string;
   gridArea: string;
   link: string;
-  id: number;
 };
 
 export const Project = (props: ProjectPropsType) => {

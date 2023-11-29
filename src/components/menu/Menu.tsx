@@ -5,7 +5,7 @@ import { theme } from "../../styles/Theme";
 interface menuItemPropsType {
   name: string;
   link: string;
-  id: any;
+  id: number;
 }
 
 interface menuItemsPropsType {

@@ -61,13 +61,12 @@ export const Projects = () => {
       <ProjectsWrapper>
       {projectItems.map((item) => {
           return (
-            <Project
+            <Project key={item.id}
           title={item.title}
           text={item.text}
           src={item.src}
           link={item.link}
           gridArea={item.gridArea}
-          id={item.id}
         />
           );
         })}

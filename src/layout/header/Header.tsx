@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
+import { Menu } from "./menu/Menu";
 import { Container } from "../../components/Container";
 import { Button } from "../../components/Button";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 const menuItems = [
   {name: 'Home', link: '', id: 1}, 
@@ -20,6 +21,7 @@ export const Header = () => {
         <FlexWrapper justify={"space-between"} align={"center"}>
           <Button>Projects Here</Button>
           <Menu items={menuItems} />
+          <MobileMenu items={menuItems} />
         </FlexWrapper>
       </Container>
     </StyledHeader>

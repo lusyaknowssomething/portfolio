@@ -10,6 +10,7 @@ import travel from "../../../assets/images/projects/travel.jpg";
 import { Dot } from "../../../components/Dot";
 
 import ReactDOM from 'react-dom/client';
+import { theme } from "../../../styles/Theme";
 
 const projectItems = [
   {
@@ -86,6 +87,10 @@ const ProjectsWrapper = styled.section`
     "todo mesto travel";
   gap: 25px;
   grid-template-columns: 45.15% 1fr 1fr;
+
+  @media ${theme.media.mobile} {
+    
+  }
 `;
 
 
@@ -111,35 +116,3 @@ root.render(
       <StyledBuilding href="#">ChoiceLink</StyledBuilding>
   </div>
 );
-
-// import ReactDOM from 'react-dom/client';
-// import styled, { css } from "styled-components";
-
-
-// const StyledCabinet = styled.a`
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 25px;
-//   white-space: nowrap;
-//   color: #2182d9;
-// `
-
-// type CabinetPropsType = {
-//     path: string
-//     text: string
-// }
-
-// function Cabinet(props:XXX) {
-//     return (
-//         <StyledCabinet href={props.YYY}>
-//             {props.ZZZ}
-//         </StyledCabinet>
-//     );
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-// root.render(
-//     <div className="App">
-//         <Cabinet path="https://hotmart.s3.amazonaws.com/product_pictures/ccdb08be-d4d5-467b-8491-a88bf61024bc/guiahtml38051.png" text="See Cabinet" />
-//     </div>
-// );

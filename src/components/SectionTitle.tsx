@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-  color: ${theme.colors.font};
-  font-size: 50px;
-  font-weight: 600;
-  line-height: 152%;
+  ${font({weight: 600, lineHeight: 1.52, Fmax: 50, Fmin: 30})}
+  
   text-align: center;
   margin-bottom: 80px;
 `;

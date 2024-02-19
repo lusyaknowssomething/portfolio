@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { theme } from "../../../../styles/Theme";
 
 type SkillPropsType = {
   iconId: string;
@@ -24,6 +25,13 @@ const StyledSkill = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 55px;
+
+  @media ${theme.media.mobile} {
+    width: 45%;
+    :last-child {
+      display: none;
+    }
+  }
 `;
 
 const SkillTitle = styled.h3`

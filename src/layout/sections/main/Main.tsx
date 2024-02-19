@@ -60,6 +60,10 @@ const SmallText = styled.span`
   display: block;
   font-size: 16px;
   font-weight: 600;
+
+  @media ${theme.media.tablet} {
+    padding-top: 100px;
+  }
 `;
 
 const Name = styled.span`

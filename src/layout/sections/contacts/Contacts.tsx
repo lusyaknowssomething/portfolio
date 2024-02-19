@@ -12,7 +12,7 @@ export const Contacts = () => {
   return (
     <StyledContacts>
       <Container>
-        <FlexWrapper align="center" justify="space-between" wrap="wrap">
+        <ContactsWrapper >
           <Image src={imageForContact} />
           <FlexWrapper direction="column">
             <SectionTitle>
@@ -32,13 +32,24 @@ export const Contacts = () => {
               </Button>
             </StyledForm>
           </FlexWrapper>
-        </FlexWrapper>
+        </ContactsWrapper>
       </Container>
     </StyledContacts>
   );
 };
 
 const StyledContacts = styled.section``;
+
+const ContactsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1300px) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+`;
 
 const StyledForm = styled.form`
   width: 100%;
@@ -77,6 +88,10 @@ const Image = styled.img`
   object-fit: cover;
   width: 100%;
   max-width: 557px;
+
+  @media screen and (max-width: 1300px) {
+    margin-right: -20%;
+  }
 `;
 
 const Text = styled.p`

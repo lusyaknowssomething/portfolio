@@ -31,7 +31,7 @@ export const Menu: React.FC<menuItemsPropsType> = (props) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
-    gap: 52px;
+    gap: 42px;
     justify-content: center;
   }
 

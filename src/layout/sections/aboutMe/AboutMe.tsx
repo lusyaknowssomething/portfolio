@@ -11,7 +11,7 @@ export const AboutMe = () => {
     <StyledAboutMe>
       <Container>
         <SectionTitle>About me<Dot>.</Dot></SectionTitle>
-        <FlexWrapper gap="100px">
+        <FlexWrapper gap="100px" wrap="wrap">
           <Column>
             I’m front-end developer looking for the opportunities to grow
             professionally. Having 1-year background in the B2B field as a

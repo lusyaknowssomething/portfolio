@@ -12,7 +12,7 @@ export const Contacts = () => {
   return (
     <StyledContacts>
       <Container>
-        <FlexWrapper align="center" justify="space-between">
+        <FlexWrapper align="center" justify="space-between" wrap="wrap">
           <Image src={imageForContact} />
           <FlexWrapper direction="column">
             <SectionTitle>

@@ -7,16 +7,17 @@ import { SocialIcons } from "../../../components/socialIcons/SocialIcons";
 import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align="center" justify="space-between">
+        <FlexWrapper align="center" justify="space-between" wrap="wrap">
           <div>
             <SmallText>Hello! I’m</SmallText>
             <Name>Khatanzeyskaya Lyudmila</Name>
-            <MainTitle>Frontend <Mask>Developer</Mask></MainTitle>
+            <MainTitle>Frontend <br/><Mask>Developer</Mask></MainTitle>
             <SocialIcons />
             <Button bgcolor={theme.colors.accent}>HIRE ME</Button>
           </div>
@@ -31,17 +32,19 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   display: flex;
-  min-height: 100vh;
   background: no-repeat url(${Graphic}) bottom left 30%;
-  background-size: 661px ;
+  background-size: 661px;
+
+  
 `;
 
 const MainTitle = styled.h1`
-  font-size: 90px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 90px;
-  padding-top: 15px;
+  ${font({weight: 600, Fmin: 50, Fmax: 100})}
+  padding-top: 15px;  
+
+  @media ${theme.media.mobile} {
+    padding-top: 35px;
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -60,18 +63,25 @@ const SmallText = styled.span`
 `;
 
 const Name = styled.span`
+  ${font({weight: 600, color: theme.colors.accent, Fmin: 22, Fmax: 28})}
   display: block;
-  font-size: 28px;
-  font-weight: 600;
-  color: ${theme.colors.accent};
   padding-top: 20px;
+
+  @media ${theme.media.mobile} {
+    padding-top: 15px;
+  }
 `;
 
 const Mask = styled.span`
-  display: block;
+  display: inline-block;
   padding-left: 69px;
   position: relative;
   padding-bottom: 72px;
+
+  @media ${theme.media.mobile} {
+    padding-left: 20px;
+    padding-bottom: 50px;
+  }
 
   &::after {
     content: "";
@@ -83,5 +93,12 @@ const Mask = styled.span`
     right: -30px;
     bottom: 80px;
     border-radius: 50%;
+
+    @media ${theme.media.mobile} {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+      bottom: 60px;
+  }
   }
 `;

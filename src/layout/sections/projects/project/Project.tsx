@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 import { Button } from "../../../../components/Button";
+import { font } from "../../../../styles/Common";
 
 type ProjectPropsType = {
   title: string;
@@ -19,7 +20,7 @@ export const Project = (props: ProjectPropsType) => {
         <Description>
           <Title>{props.title}</Title>
           <Text>{props.text}</Text>
-          <Button bgcolor={theme.colors.accent}>View</Button>
+          <Button bgcolor={theme.colors.accent} width="140px" height="45px">View</Button>
         </Description>
       </ImageWrapper>
     </StyledProject>
@@ -51,8 +52,7 @@ const Description = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 18px;
-  font-weight: 700;
+  ${font({color: theme.colors.fontButton ,weight: 700, Fmin: 12, Fmax: 18})}
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -60,10 +60,14 @@ const Title = styled.h3`
 `;
 
 const Text = styled.p`
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   width: 70%;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 const ImageWrapper = styled.div`

@@ -88,8 +88,16 @@ const ProjectsWrapper = styled.section`
   gap: 25px;
   grid-template-columns: 45.15% 1fr 1fr;
 
+  @media ${theme.media.tablet} {
+    grid-template-areas:
+    "todo todo"
+    "SN ME"
+    "mesto travel";
+    grid-template-columns: 1fr 1fr;
+  }
   @media ${theme.media.mobile} {
-    
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 

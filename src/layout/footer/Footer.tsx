@@ -1,40 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 import { SocialIcons } from "../../components/socialIcons/SocialIcons";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { theme } from "../../styles/Theme";
+import { S } from "./Footer_Styles"
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.StyledFooter>
       <FlexWrapper justify="center" direction="column" align="center">
-        <Text>YOU CAN FIND ME HERE:</Text>
+        <S.Text>YOU CAN FIND ME HERE:</S.Text>
         <SocialIcons />
-        <Copyright>
+        <S.Copyright>
           © 2023 Lyudmila Khatanzeyskaya, All rights reserved
-        </Copyright>
+        </S.Copyright>
       </FlexWrapper>
-    </StyledFooter>
+    </S.StyledFooter>
   );
 };
 
-const StyledFooter = styled.footer`
-  padding: 40px 0;
-`;
-
-const Text = styled.span`
-  font-weight: 700px;
-  font-size: 18px;
-  margin-bottom: 30px;
-
-  @media ${theme.media.mobile} {
-    font-size: 16px;
-  }
-`;
-
-const Copyright = styled.small`
-  font-weight: 400;
-  font-size: 12px;
-  text-align: center;
-  opacity: 0.5;
-`;

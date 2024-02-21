@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { S } from "./Contacts_Styles"
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
     <S.StyledContacts>
       <Container>

@@ -1,6 +1,5 @@
 import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import aboutMeImage from "../../../assets/images/photos/Lyudmila_rectangle.webp";
 import { Container } from "../../../components/Container";

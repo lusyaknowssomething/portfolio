@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { SocialIcons } from "../../components/socialIcons/SocialIcons";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
@@ -25,6 +26,10 @@ const Text = styled.span`
   font-weight: 700px;
   font-size: 18px;
   margin-bottom: 30px;
+
+  @media ${theme.media.mobile} {
+    font-size: 16px;
+  }
 `;
 
 const Copyright = styled.small`

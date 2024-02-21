@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Button } from "../../../components/Button";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -7,97 +5,35 @@ import imageForContact from "../../../assets/images/photos/For-footer.png";
 import { Dot } from "../../../components/Dot";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { S } from "./Contacts_Styles"
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <S.StyledContacts>
       <Container>
-        <ContactsWrapper >
-          <Image src={imageForContact} />
+        <S.ContactsWrapper >
+          <S.Image src={imageForContact} />
           <FlexWrapper direction="column">
             <SectionTitle>
               Contacts<Dot>.</Dot>
             </SectionTitle>
-            <Text>
+            <S.Text>
               Please fill out the form on this section to contact with me or
               send me an email. I will answer you as soon as I receive your
               message.
-            </Text>
-            <StyledForm>
-              <Field placeholder={"Name"} />
-              <Field placeholder={"Email"} />
-              <Field placeholder={"Message"} as={"textarea"} />
+            </S.Text>
+            <S.StyledForm>
+              <S.Field placeholder={"Name"} />
+              <S.Field placeholder={"Email"} />
+              <S.Field placeholder={"Message"} as={"textarea"} />
               <Button type={"submit"} bgcolor={theme.colors.accent}>
                 Send message
               </Button>
-            </StyledForm>
+            </S.StyledForm>
           </FlexWrapper>
-        </ContactsWrapper>
+        </S.ContactsWrapper>
       </Container>
-    </StyledContacts>
+    </S.StyledContacts>
   );
 };
 
-const StyledContacts = styled.section``;
-
-const ContactsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 1300px) {
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-  }
-`;
-
-const StyledForm = styled.form`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-
-  textarea {
-    resize: none;
-    height: 220px;
-    width: 100%;
-  }
-`;
-
-const Field = styled.input`
-  width: 100%;
-  border: 1px solid ${theme.colors.formBorder};
-  font-family: Poppins;
-  padding: 7px 15px;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.6px;
-
-  &::placeholder {
-  color: ${theme.colors.formFont};
-  }
-
-  &:focus-visible {
-    border: 1px solid ${theme.colors.accent};
-    outline: none;
-  }
-`;
-
-const Image = styled.img`
-  object-fit: cover;
-  width: 100%;
-  max-width: 557px;
-
-  @media screen and (max-width: 1300px) {
-    margin-right: -20%;
-  }
-`;
-
-const Text = styled.p`
-  text-align: center;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 103px;
-  margin-top: -60px;
-`;

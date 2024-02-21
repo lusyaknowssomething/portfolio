@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Project } from "./project/Project";
 import mesto from "../../../assets/images/projects/mesto.jpg";
@@ -8,9 +7,7 @@ import socialNetwork from "../../../assets/images/projects/social-network.jpg";
 import todo from "../../../assets/images/projects/todo.jpg";
 import travel from "../../../assets/images/projects/travel.jpg";
 import { Dot } from "../../../components/Dot";
-
-import ReactDOM from 'react-dom/client';
-import { theme } from "../../../styles/Theme";
+import { S } from "./Projects_Styles"
 
 const projectItems = [
   {
@@ -55,13 +52,13 @@ const projectItems = [
   },
 ];
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <S.StyledProjects>
       <SectionTitle>
         My Projects<Dot>.</Dot>
       </SectionTitle>
-      <ProjectsWrapper>
+      <S.ProjectsWrapper>
       {projectItems.map((item) => {
           return (
             <Project key={item.id}
@@ -73,54 +70,8 @@ export const Projects = () => {
         />
           );
         })}
-      </ProjectsWrapper>
-    </StyledProjects>
+      </S.ProjectsWrapper>
+    </S.StyledProjects>
   );
 };
 
-const StyledProjects = styled.section``;
-
-const ProjectsWrapper = styled.section`
-  display: grid;
-  grid-template-areas:
-    "todo SN ME"
-    "todo mesto travel";
-  gap: 25px;
-  grid-template-columns: 45.15% 1fr 1fr;
-
-  @media ${theme.media.tablet} {
-    grid-template-areas:
-    "todo todo"
-    "SN ME"
-    "mesto travel";
-    grid-template-columns: 1fr 1fr;
-  }
-  @media ${theme.media.mobile} {
-    display: flex;
-    flex-wrap: wrap;
-  }
-`;
-
-
-type BuildingPropsType = {
-  children: string
-  href?: string
-};
-
-const StyledBuilding = styled.button<BuildingPropsType>`
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.2;
-  white-space: nowrap;
-  color: #11be5f;
-`
-
-
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-  <div className="App">
-      <StyledBuilding>ChoiceButton</StyledBuilding>
-
-      <StyledBuilding href="#">ChoiceLink</StyledBuilding>
-  </div>
-);

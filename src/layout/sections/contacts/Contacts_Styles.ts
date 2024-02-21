@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
-const StyledContacts = styled.section``;
+const Contacts = styled.section``;
 
 const ContactsWrapper = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const ContactsWrapper = styled.div`
   }
 `;
 
-const StyledForm = styled.form`
+const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -66,9 +66,9 @@ const Text = styled.p`
 `;
 
 export const S = {
-  StyledContacts,
+  Contacts,
   ContactsWrapper,
-  StyledForm,
+  Form,
   Field,
   Image,
   Text,

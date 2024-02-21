@@ -1,48 +1,61 @@
 import React from "react";
-import styled from "styled-components";
 import { Icon } from "../icon/Icon";
-import { theme } from "../../styles/Theme";
+import { S } from "./SociallIcons_Styles"
 
-export const SocialIcons = () => {
+const SocialIconsData = [
+  {
+    id: 0,
+    href: "#",
+    iconId: "gitHub",
+    width: "30px",
+    height: "30px",
+    viewBox: "0 0 30 30",
+  },
+  {
+    id: 1,
+    href: "#",
+    iconId: "linkedin",
+    width: "32px",
+    height: "28px",
+    viewBox: "0 0 32 28",
+  },
+  {
+    id: 2,
+    href: "#",
+    iconId: "telegram",
+    width: "30px",
+    height: "30px",
+    viewBox: "0 0 30 30",
+  },
+  {
+    id: 3,
+    href: "#",
+    iconId: "instagram",
+    width: "31px",
+    height: "27px",
+    viewBox: "0 0 31 27",
+  },
+];
+
+export const SocialIcons: React.FC = () => {
   return (
-    <SocialList>
-      <SocialItem>
-        <StyledLink href="#">
-          <Icon iconId="gitHub" width="30px" height="30px" viewBox="0 0 30 30" />
-        </StyledLink>
-      </SocialItem>
-      <SocialItem>
-        <StyledLink href="#">
-          <Icon iconId="linkedin" width="32px" height="28px" viewBox="0 0 32 28" />
-        </StyledLink>
-      </SocialItem>
-      <SocialItem>
-        <StyledLink href="#">
-          <Icon iconId="telegram" width="30px" height="30px" viewBox="0 0 30 30" />
-        </StyledLink>
-      </SocialItem>
-      <SocialItem>
-        <StyledLink href="#">
-          <Icon iconId="instagram" width="31px" height="27px" viewBox="0 0 31 27" />
-        </StyledLink>
-      </SocialItem>
-    </SocialList>
+    <S.SocialList>
+      {SocialIconsData.map((i) => {
+        return (
+          <S.SocialItem>
+            <S.StyledLink href={i.href}>
+              <Icon
+                key={i.id}
+                iconId={i.iconId}
+                width={i.width}
+                height={i.height}
+                viewBox={i.viewBox}
+              />
+            </S.StyledLink>
+          </S.SocialItem>
+        );
+      })}
+    </S.SocialList>
   );
 };
 
-const SocialList = styled.ul`
-  display: flex;
-  list-style: none;
-  gap: 40px;
-  padding-bottom: 34px;
-`;
-
-const SocialItem = styled.li``;
-
-const StyledLink = styled.a`
-  color: ${theme.colors.font};
-
-  &:hover {
-    color: ${theme.colors.accent};
-  }
-`;

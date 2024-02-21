@@ -9,7 +9,7 @@ import { S } from "./Contacts_Styles"
 
 export const Contacts: React.FC = () => {
   return (
-    <S.StyledContacts>
+    <S.Contacts>
       <Container>
         <S.ContactsWrapper >
           <S.Image src={imageForContact} />
@@ -22,18 +22,18 @@ export const Contacts: React.FC = () => {
               send me an email. I will answer you as soon as I receive your
               message.
             </S.Text>
-            <S.StyledForm>
+            <S.Form>
               <S.Field placeholder={"Name"} />
               <S.Field placeholder={"Email"} />
               <S.Field placeholder={"Message"} as={"textarea"} />
               <Button type={"submit"} bgcolor={theme.colors.accent}>
                 Send message
               </Button>
-            </S.StyledForm>
+            </S.Form>
           </FlexWrapper>
         </S.ContactsWrapper>
       </Container>
-    </S.StyledContacts>
+    </S.Contacts>
   );
 };
 

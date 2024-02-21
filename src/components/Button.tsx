@@ -15,28 +15,4 @@ export const Button = styled.button<ButtonPropsType>`
   height: ${props => props.height || "52px"};
   cursor: pointer;
   background-color: ${props => props.bgcolor || theme.colors.font};
-
-
-  /* position: relative;
-  z-index: 0;
-
-  &hover {
-    &::before {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  &::before {
-    content: "";
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    display: inline-block;
-    height: 10px;
-    width: 50%;
-    background-color: ${theme.colors.accent};
-    z-index: -1;
-  } */
   `;

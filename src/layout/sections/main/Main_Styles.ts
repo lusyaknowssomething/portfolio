@@ -8,8 +8,6 @@ const StyledMain = styled.section`
   display: flex;
   background: no-repeat url(${Graphic}) bottom left 30%;
   background-size: 661px;
-
-  
 `;
 
 const MainTitle = styled.h1`

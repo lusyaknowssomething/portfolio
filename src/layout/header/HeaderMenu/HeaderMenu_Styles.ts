@@ -55,6 +55,7 @@ const MobileMenu = styled.nav``;
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   background-color: ${theme.colors.accent};
+  opacity: .95;
   left: 0;
   right: 0;
   bottom: 0;
@@ -74,6 +75,9 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     gap: 52px;
     justify-content: center;
     flex-direction: column;
+    a {&::after {
+    background-color: black;
+  }}
   }
 `;
 
@@ -84,6 +88,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   top: -100px;
   right: -100px;
   z-index: 9999;
+  cursor: pointer;
 
   span {
     display: block;

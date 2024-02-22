@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu } from "../menu/Menu";
-import { S } from '../HeaderMenu_Styles'
+import { S } from "../HeaderMenu_Styles";
 
 interface menuItemPropsType {
   name: string;
@@ -13,17 +13,20 @@ interface menuItemsPropsType {
 }
 
 export const MobileMenu: React.FC<menuItemsPropsType> = (props) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const onBurgerBtnClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
     <S.MobileMenu>
-      <S.BurgerButton isOpen={false}>
+      <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={false}>
+      <S.MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
         <Menu items={props.items} />
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );
 };
-
-
-

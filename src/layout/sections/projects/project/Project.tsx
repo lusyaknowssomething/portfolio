@@ -9,11 +9,12 @@ type ProjectPropsType = {
   src: string;
   gridArea: string;
   link: string;
+  style?: any;
 };
 
 export const Project: React.FC <ProjectPropsType> = (props: ProjectPropsType) => {
   return (
-    <S.StyledProject gridArea={props.gridArea}>
+    <S.Project gridArea={props.gridArea} style={props.style}>
       <S.ImageWrapper>
         <S.Image src={props.src} alt={props.title} />
         <S.Description>
@@ -22,7 +23,7 @@ export const Project: React.FC <ProjectPropsType> = (props: ProjectPropsType) =>
           <Button bgcolor={theme.colors.accent} width="140px" height="45px">View</Button>
         </S.Description>
       </S.ImageWrapper>
-    </S.StyledProject>
+    </S.Project>
   );
 };
 

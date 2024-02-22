@@ -5,9 +5,13 @@ import mesto from "../../../assets/images/projects/mesto.jpg";
 import movieExplorer from "../../../assets/images/projects/movie_explorer.jpg";
 import socialNetwork from "../../../assets/images/projects/social-network.jpg";
 import todo from "../../../assets/images/projects/todo.jpg";
+import todoForMobile from "../../../assets/images/projects/todofromobile.jpg";
 import travel from "../../../assets/images/projects/travel.jpg";
 import { Dot } from "../../../components/Dot";
-import { S } from "./Projects_Styles"
+import { S } from "./Projects_Styles";
+
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 const projectItems = [
   {
@@ -21,7 +25,7 @@ const projectItems = [
   {
     title: "Social Network",
     text: "Social Network is an online platform that allows people to create an account and interact with other people on the website. Users can build there virtual world on the site, make friends and share their thoughts and ideas by writing a post.",
-    src: socialNetwork ,
+    src: socialNetwork,
     link: "",
     gridArea: "SN",
     id: 2,
@@ -53,25 +57,51 @@ const projectItems = [
 ];
 
 export const Projects: React.FC = () => {
-  return (
-    <S.StyledProjects>
-      <SectionTitle>
-        My Projects<Dot>.</Dot>
-      </SectionTitle>
-      <S.ProjectsWrapper>
-      {projectItems.map((item) => {
-          return (
-            <Project key={item.id}
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 577;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  //
+
+  const items = [
+    ...projectItems.map((item) => {
+      let style
+      if(item.title === "ToDo List" && width < breakpoint) {
+        item.src = todoForMobile
+      } if(item.title === "ToDo List" && width >= breakpoint) {
+        item.src = todo
+      }
+
+      return (
+        <Project
+          key={item.id}
           title={item.title}
           text={item.text}
           src={item.src}
           link={item.link}
           gridArea={item.gridArea}
+          style={style}
         />
-          );
-        })}
-      </S.ProjectsWrapper>
-    </S.StyledProjects>
+      );
+    }),
+  ];
+  
+
+  const Carousel = () => <AliceCarousel mouseTracking items={items} />;
+
+
+  return (
+    <S.Projects>
+      <SectionTitle>
+        My Projects<Dot>.</Dot>
+      </SectionTitle>
+      {width < breakpoint ? <Carousel /> : <S.ProjectsWrapper>{items}</S.ProjectsWrapper>}
+    </S.Projects>
   );
 };
-

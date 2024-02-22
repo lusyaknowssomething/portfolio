@@ -3,9 +3,9 @@ import { theme } from './../../../styles/Theme';
 import { font } from '../../../styles/Common';
 
 
-// Project
+// Projects
 
-const StyledProjects = styled.section``;
+const Projects = styled.section``;
 
 const ProjectsWrapper = styled.section`
   display: grid;
@@ -34,7 +34,7 @@ type StyledProjectPropsType = {
   gridArea?: string;
 };
 
-const StyledProject = styled.div<StyledProjectPropsType>`
+const Project = styled.div<StyledProjectPropsType>`
   width: 100%;
   position: relative;
   grid-area: ${(props) => props.gridArea};
@@ -104,9 +104,9 @@ const ImageWrapper = styled.div`
 `;
 
 export const S = {
-  StyledProjects,
+  Projects,
   ProjectsWrapper,
-  StyledProject,
+  Project,
   Image,
   Description,
   Title,

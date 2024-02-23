@@ -5,7 +5,7 @@ import { S } from "./SociallIcons_Styles"
 const SocialIconsData = [
   {
     id: 0,
-    href: "#",
+    href: "https://github.com/lusyaknowssomething",
     iconId: "gitHub",
     width: "30px",
     height: "30px",
@@ -13,7 +13,7 @@ const SocialIconsData = [
   },
   {
     id: 1,
-    href: "#",
+    href: "https://www.linkedin.com/in/lyudmila-khatanzeyskaya",
     iconId: "linkedin",
     width: "32px",
     height: "28px",
@@ -21,7 +21,7 @@ const SocialIconsData = [
   },
   {
     id: 2,
-    href: "#",
+    href: "https://t.me/dhdvbdd",
     iconId: "telegram",
     width: "30px",
     height: "30px",
@@ -29,7 +29,7 @@ const SocialIconsData = [
   },
   {
     id: 3,
-    href: "#",
+    href: "https://www.instagram.com/lusyaknowsnothing",
     iconId: "instagram",
     width: "31px",
     height: "27px",
@@ -43,7 +43,7 @@ export const SocialIcons: React.FC = () => {
       {SocialIconsData.map((i) => {
         return (
           <S.SocialItem>
-            <S.StyledLink href={i.href}>
+            <S.StyledLink href={i.href} target="_blank">
               <Icon
                 key={i.id}
                 iconId={i.iconId}

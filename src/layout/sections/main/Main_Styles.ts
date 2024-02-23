@@ -13,14 +13,20 @@ const StyledMain = styled.section`
 const MainTitle = styled.h1`
   ${font({weight: 600, Fmin: 50, Fmax: 100})}
   padding-top: 15px;  
+  max-width: 614px;
 
   @media ${theme.media.mobile} {
     padding-top: 35px;
+  }
+
+  p {
+    display: none;
   }
 `;
 
 const PhotoWrapper = styled.div`
   max-width: 483px;
+  overflow: hidden;
 `
 
 const Photo = styled.img`

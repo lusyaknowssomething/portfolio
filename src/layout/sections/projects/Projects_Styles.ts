@@ -7,7 +7,7 @@ import { font } from '../../../styles/Common';
 
 const Projects = styled.section``;
 
-const ProjectsWrapper = styled.section`
+const ProjectsWrapper = styled.div`
   display: grid;
   grid-template-areas:
     "todo SN ME"

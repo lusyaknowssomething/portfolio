@@ -20,7 +20,7 @@ export const Project: React.FC <ProjectPropsType> = (props: ProjectPropsType) =>
         <S.Description>
           <S.Title>{props.title}</S.Title>
           <S.Text>{props.text}</S.Text>
-          <Button bgcolor={theme.colors.accent} width="140px" height="45px">View</Button>
+          <Button as="a" href={props.link} target="_blank" bgcolor={theme.colors.accent} width="140px" height="45px">View</Button>
         </S.Description>
       </S.ImageWrapper>
     </S.Project>

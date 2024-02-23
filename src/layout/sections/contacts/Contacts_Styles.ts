@@ -7,6 +7,7 @@ const ContactsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 
   @media screen and (max-width: 1300px) {
     flex-wrap: wrap-reverse;

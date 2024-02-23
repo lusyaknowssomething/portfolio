@@ -15,6 +15,7 @@ const Skill = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 55px;
+  padding-top: 40px;
 
   @media ${theme.media.mobile} {
     width: 45%;

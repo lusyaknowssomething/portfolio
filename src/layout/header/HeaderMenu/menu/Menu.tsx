@@ -1,24 +1,28 @@
-import React from 'react';
-import { S } from '../HeaderMenu_Styles'
+import React from "react";
+import { S } from "../HeaderMenu_Styles";
 
-interface menuItemPropsType {
-  name: string;
-  link: string;
-  id: number;
-}
+const menuItems = [
+  { name: "Home", link: "home", id: 1 },
+  { name: "About me", link: "aboutMe", id: 2 },
+  { name: "My skills", link: "skills", id: 3 },
+  { name: "Projects", link: "projects", id: 4 },
+  { name: "Contacts", link: "contacts", id: 5 },
+];
 
-interface menuItemsPropsType {
-  items: menuItemPropsType[];
-}
-
-export const Menu: React.FC <menuItemsPropsType> = (props) => {
+export const Menu: React.FC = () => {
   return (
     <div>
       <ul>
-        {props.items.map((item) => {
+        {menuItems.map((item) => {
           return (
             <S.MenuItem key={item.id}>
-              <S.Link href={item.link}>{item.name}</S.Link>
+              <S.MenuLink
+                activeClass="active"
+                to={item.link}
+                spy={true}
+              >
+                {item.name}
+              </S.MenuLink>
             </S.MenuItem>
           );
         })}
@@ -26,4 +30,3 @@ export const Menu: React.FC <menuItemsPropsType> = (props) => {
     </div>
   );
 };
-

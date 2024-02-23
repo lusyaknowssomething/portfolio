@@ -6,13 +6,6 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { MobileMenu } from "./HeaderMenu/mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
 
-const menuItems = [
-  {name: 'Home', link: '', id: 1}, 
-  {name: 'About me', link: '', id: 2}, 
-  {name: 'My skills', link: '', id: 3}, 
-  {name: 'Projects', link: '', id: 4}, 
-  {name: 'Contacts', link: '', id: 5},
-]
 
 export const Header: React.FC = () => {
 
@@ -33,9 +26,9 @@ export const Header: React.FC = () => {
     <S.StyledHeader>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"} gap="20px">
-          <Button>Projects Here</Button>
+          <Button as="a" href="https://github.com/lusyaknowssomething" target="_blank">Projects Here</Button>
           
-          {width <breakpoint ? <MobileMenu items={menuItems} /> : <DesktopMenu items={menuItems} />}
+          {width <breakpoint ? <MobileMenu /> : <DesktopMenu  />}
           
         </FlexWrapper>
       </Container>

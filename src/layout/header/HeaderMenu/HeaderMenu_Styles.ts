@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { theme } from './../../../styles/Theme';
 import styled, { css } from "styled-components";
 
@@ -7,7 +8,7 @@ import styled, { css } from "styled-components";
 const MenuItem = styled.li`
 `;
 
-const Link = styled.a`
+const MenuLink = styled(Link)`
   color: ${theme.colors.font};
   font-size: 18px;
   font-style: normal;
@@ -30,7 +31,7 @@ const Link = styled.a`
     opacity: 0;
   }
 
-  &:hover {
+  &:hover, &.active {
     &::after {
       opacity: 1;
     }
@@ -142,7 +143,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 export const S = {
   MenuItem,
-  Link,
+  MenuLink,
   MobileMenu,
   MobileMenuPopup,
   BurgerButton,

@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   body {
     margin: 0;
@@ -19,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
     line-height: 1.2;
-    min-width: 360px;
+    min-width: 320px;
   }
 
   a {

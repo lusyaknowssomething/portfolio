@@ -7,7 +7,7 @@ import { S } from "./AboutMe_Styles"
 
 export const AboutMe: React.FC = () => {
   return (
-    <S.AboutMe>
+    <S.AboutMe id={"aboutMe"}>
       <Container>
         <SectionTitle>About me<Dot>.</Dot></SectionTitle>
         <S.ColumnWrapper>

@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { font } from './../../../styles/Common';
 import { theme } from '../../../styles/Theme';
+
 const ColumnWrapper = styled.div`
 display: flex;
-flex-wrap: wrap;
 gap: 100px;
 
 @media ${theme.media.tablet} {
     gap: 50px;
+    flex-wrap: wrap;
   }
 `;
 
@@ -33,7 +34,11 @@ const AboutMe = styled.section`
 `;
 
 const Column = styled.p`
-   ${font({weight: 400, Fmin: 15, Fmax: 18})}
+  ${font({weight: 400, Fmin: 15, Fmax: 18})}
+  width: 48%;
+  @media ${theme.media.tablet} {
+    width: 100%;
+  }
 `;
 
 export const S = {

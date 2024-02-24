@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio%20/static/css/main.a700793b.css",
+    "main.js": "/portfolio%20/static/js/main.bd392cdf.js",
+    "static/js/787.25eaef86.chunk.js": "/portfolio%20/static/js/787.25eaef86.chunk.js",
+    "static/media/For-footer.png": "/portfolio%20/static/media/For-footer.eb09d7ba63fad9272d22.png",
+    "static/media/For-main.png": "/portfolio%20/static/media/For-main.8b9999987cd1f81422f0.png",
+    "static/media/Lyudmila_rectangle.webp": "/portfolio%20/static/media/Lyudmila_rectangle.32ad7cba10f7819a3fc7.webp",
+    "static/media/todo.jpg": "/portfolio%20/static/media/todo.b77b79000491c6c2a39a.jpg",
+    "static/media/icons-sprite.svg": "/portfolio%20/static/media/icons-sprite.6559d9bdbf184cb0eda7c2f3ae0ffa27.svg",
+    "static/media/travel.jpg": "/portfolio%20/static/media/travel.0a7a73d22de221c3e8e0.jpg",
+    "static/media/social-network.jpg": "/portfolio%20/static/media/social-network.eed1534c4e2bad08e993.jpg",
+    "static/media/movie_explorer.jpg": "/portfolio%20/static/media/movie_explorer.c11247d67cb028d6a6a4.jpg",
+    "static/media/todofromobile.jpg": "/portfolio%20/static/media/todofromobile.8a6f3c2532afd88a47c4.jpg",
+    "static/media/Vector_dotted.svg": "/portfolio%20/static/media/Vector_dotted.6f7f3b9baba8bf89d29a4bcca25009b8.svg",
+    "static/media/mesto.jpg": "/portfolio%20/static/media/mesto.36eb1394cf57475982ac.jpg",
+    "index.html": "/portfolio%20/index.html",
+    "main.a700793b.css.map": "/portfolio%20/static/css/main.a700793b.css.map",
+    "main.bd392cdf.js.map": "/portfolio%20/static/js/main.bd392cdf.js.map",
+    "787.25eaef86.chunk.js.map": "/portfolio%20/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a700793b.css",
+    "static/js/main.bd392cdf.js"
+  ]
+}

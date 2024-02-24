@@ -12,6 +12,7 @@ import { S } from "./Projects_Styles";
 import "../../../styles/Slider.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { Fade } from "react-awesome-reveal";
 
 const projectItems = [
   {
@@ -67,15 +68,16 @@ export const Projects: React.FC = () => {
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
-  //изменение размера первой картинки для карусели 
+  //изменение размера первой картинки для карусели
 
   const items = [
     ...projectItems.map((item) => {
-      let style
-      if(item.title === "ToDo List" && width < breakpoint) {
-        item.src = todoForMobile
-      } if(item.title === "ToDo List" && width >= breakpoint) {
-        item.src = todo
+      let style;
+      if (item.title === "ToDo List" && width < breakpoint) {
+        item.src = todoForMobile;
+      }
+      if (item.title === "ToDo List" && width >= breakpoint) {
+        item.src = todo;
       }
 
       return (
@@ -91,17 +93,21 @@ export const Projects: React.FC = () => {
       );
     }),
   ];
-  
 
   const Carousel = () => <AliceCarousel mouseTracking items={items} />;
-
 
   return (
     <S.Projects id={"projects"}>
       <SectionTitle>
         My Projects<Dot>.</Dot>
       </SectionTitle>
-      {width < breakpoint ? <Carousel /> : <S.ProjectsWrapper>{items}</S.ProjectsWrapper>}
+      <Fade direction="up" triggerOnce={true}>
+        {width < breakpoint ? (
+          <Carousel />
+        ) : (
+          <S.ProjectsWrapper>{items}</S.ProjectsWrapper>
+        )}
+      </Fade>
     </S.Projects>
   );
 };

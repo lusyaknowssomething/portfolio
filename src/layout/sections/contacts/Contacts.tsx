@@ -39,7 +39,7 @@ export const Contacts: React.FC = () => {
     <S.Contacts id={"contacts"}>
       <Container>
         <S.ContactsWrapper>
-          <S.Image src={imageForContact} />
+          <S.Image src={imageForContact} alt="lyudmila khatanzeyskaya"/>
           <FlexWrapper direction="column">
             <SectionTitle>
               Contacts<Dot>.</Dot>

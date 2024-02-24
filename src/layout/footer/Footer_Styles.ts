@@ -19,7 +19,7 @@ const Copyright = styled.small`
   font-weight: 400;
   font-size: 12px;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.8;
 `;
 
 export const S = {

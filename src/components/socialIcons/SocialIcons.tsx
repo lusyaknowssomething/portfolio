@@ -43,7 +43,7 @@ export const SocialIcons: React.FC = () => {
       {SocialIconsData.map((i) => {
         return (
           <S.SocialItem key={i.id}>
-            <S.StyledLink href={i.href} target="_blank">
+            <S.StyledLink href={i.href} target="_blank" aria-label={i.iconId}>
               <Icon
                 iconId={i.iconId}
                 width={i.width}

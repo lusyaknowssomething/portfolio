@@ -2,6 +2,7 @@
   "name": "portfolio-start",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lusyaknowssomething.github.io/portfolio ",
   "dependencies": {
     "@babel/core": "7.16.0",
     "@emailjs/browser": "^4.1.0",
@@ -33,6 +34,7 @@
     "eslint-webpack-plugin": "3.1.1",
     "file-loader": "6.2.0",
     "fs-extra": "10.0.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "5.5.0",
     "i": "^0.3.7",
     "identity-obj-proxy": "3.0.0",
@@ -73,6 +75,8 @@
     "workbox-webpack-plugin": "6.4.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"

@@ -7,7 +7,7 @@ import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { S } from "./Main_Styles";
 import Typewriter from "typewriter-effect";
-import Tilt from "react-parallax-tilt";
+import { Fade } from "react-awesome-reveal";
 
 export const Main: React.FC = () => {
   return (
@@ -30,13 +30,15 @@ export const Main: React.FC = () => {
               <S.Mask>Developer</S.Mask>
             </S.MainTitle>
             <SocialIcons />
-            <Button as="a" href={'#contacts'} bgcolor={theme.colors.accent}>HIRE ME</Button>
+            <Button as="a" href={"#contacts"} bgcolor={theme.colors.accent}>
+              HIRE ME
+            </Button>
           </div>
-          <Tilt>
+          <Fade direction="right" triggerOnce={true}>
             <S.PhotoWrapper>
               <S.Photo src={photoMain} alt="lyudmila" />
             </S.PhotoWrapper>
-          </Tilt>
+          </Fade>
         </FlexWrapper>
       </Container>
     </S.StyledMain>

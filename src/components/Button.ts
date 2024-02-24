@@ -1,5 +1,5 @@
+import { theme } from './../styles/Theme';
 import styled from "styled-components";
-import { theme } from "../styles/Theme";
 
 type ButtonPropsType = {
   bgcolor?: string;
@@ -18,4 +18,9 @@ export const Button = styled.button<ButtonPropsType>`
   height: ${props => props.height || "52px"};
   cursor: pointer;
   background-color: ${props => props.bgcolor || theme.colors.font};
+  transition: ${theme.animations.transition};
+
+  :hover {
+    transform: translateY(-5px);
+  }
   `;

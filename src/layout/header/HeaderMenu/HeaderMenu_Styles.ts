@@ -17,23 +17,24 @@ const MenuLink = styled(Link)`
   position: relative;
   cursor: pointer;
   
+  
 
   &::after {
     content: "";
     display: inline-block;
     height: 2px;
     background-color: ${theme.colors.accent};
-    width: 28px;
+    width: 0px;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1;
-    opacity: 0;
   }
 
   &:hover, &.active {
     &::after {
-      opacity: 1;
+      width: 28px;
+      transition: ${theme.animations.transition};
     }
   }
 `;
@@ -62,24 +63,33 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   top: 0;
   z-index: 999;
-  display: none;
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: .8s ease-in-out;
 
   ul {
     display: flex;
-    gap: 52px;
+    gap: 10px;
     justify-content: center;
     flex-direction: column;
+    transition: .8s ease-in-out;
+
     a {&::after {
-    background-color: black;
+    background-color: black;  
   }}
   }
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateY(0);
+      
+      ul {
+        gap: 52px;
+      }   
+    `} 
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`

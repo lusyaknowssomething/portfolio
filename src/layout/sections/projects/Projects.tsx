@@ -9,7 +9,7 @@ import todoForMobile from "../../../assets/images/projects/todofromobile.jpg";
 import travel from "../../../assets/images/projects/travel.jpg";
 import { Dot } from "../../../components/Dot";
 import { S } from "./Projects_Styles";
-import "../../../styles/Slider.css"
+import "../../../styles/Slider.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 

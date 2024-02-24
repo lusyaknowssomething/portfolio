@@ -75,22 +75,27 @@ const Text = styled.p`
 
 const ImageWrapper = styled.div`
   position: relative;
-  &:hover {
-    &::before {
+
+  &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+      opacity: 0;
+      transition: ${theme.animations.transition};
+    }
+  &:hover {
+    &::before {
+      opacity: 1;
     }
 
     ${Description} {
       opacity: 1;
+      transition: ${theme.animations.transition};
     }
   }
 
